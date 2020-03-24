@@ -1,0 +1,34 @@
+I used Python3 program to Create a Create a program called dectobin which means Decimal to Binary.
+The program should accept input from the command line,the input must be of type int. 
+The program should immediately print out the binary representation of the value input by the user
+
+
+# decimal number to binary number
+# function to convert
+# decimal to binary
+
+def dectobin(num):
+    # array to store
+    # binary number
+    binaryNum = [0] * num;
+    # counter for binary array
+    i = 0;
+    while num > 0:
+        # storing remainder
+        # in binary array
+        binaryNum[i] = num % 2;
+        num = int(num/2);
+        i += 1;
+        # printing binary array
+    # in reverse order
+    for j in range(i - 1, -1, -1):
+        print(binaryNum[j], end="");
+
+    # Driver Code
+
+num = int(input("Enter a number:\n"));
+dectobin(num);
+
+#on my PC using Command Prompt
+# C:\Users\LENOVO pc>python DecToBinary.py
+#Enter a number
